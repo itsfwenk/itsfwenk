@@ -2,8 +2,8 @@ name: Update "Now" section
 
 on:
   schedule:
-    - cron: "0 8 * * *" # runs every day at 08:00 UTC
-  workflow_dispatch: # manual trigger
+    - cron: "0 8 * * *" # daily at 08:00 UTC
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -27,11 +27,12 @@ jobs:
           echo "NOW_CONTENT=Currently active on **$LATEST_REPO** — $FOCUS (auto-updated daily)." >> $GITHUB_ENV
 
       - name: Update README.md
-        uses: peter-evans/modify-markdown@v2
+        uses: peter-evans/replace-markdown@v1
         with:
-          path: README.md
-          section: now
-          value: ${{ env.NOW_CONTENT }}
+          file: README.md
+          pattern: '(<!--START_SECTION:now-->)(.*?)(<!--END_SECTION:now-->)'
+          replacement: '${1}${{ env.NOW_CONTENT }}${3}'
+          flags: 's'
 
       - name: Commit changes
         run: |
@@ -39,4 +40,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
           git commit -m "🔄 Auto-update 'Now' section" || echo "No changes to commit"
-          gi
+          git push
