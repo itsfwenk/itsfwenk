@@ -67,7 +67,7 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 | [**Data-Science-and-Logistic-Regression**](https://github.com/itsfwenk/Data-Science-and-Logistic-Regression) | Implementing and visualizing logistic regression. | Python |
 | [**Python-for-Data-Science**](https://github.com/itsfwenk/Python-for-Data-Science) | Data manipulation, visualization, and preprocessing. | Python |
 | [**Multilayer-Perceptron**](https://github.com/itsfwenk/Multilayer-Perceptron) | Neural network from scratch (forward & backward propagation). | Python |
-| [**BLACKBOX.AI Hackathon (42AI × CAF)**](https://github.com/itsfwenk/BLACKBOX.AI-Agents-Hackathon-x-42AI-CAF) | AI agent collaboration project using OpenAlex datasets. | Python |
+| [**BLACKBOX.AI Hackathon (42AI × CAF)**](https://github.com/itsfwenk/BLACKBOX.AI-Agents-Hackathon-x-42AI-CAF) | AI agent collaboration project using BLACKBOX AI. | Python |
 
 ---
 
