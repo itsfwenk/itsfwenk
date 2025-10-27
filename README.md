@@ -76,11 +76,11 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 Currently working on **itsfwenk** — Fix GitHub Actions workflow: add permissions and escape commit messages (auto-updated daily).
 <!--END_SECTION:now-->
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
   <img src="https://img.shields.io/badge/Machine%20Learning-102230?style=for-the-badge&logo=scikitlearn&logoColor=F7931E"/>
   <img src="https://img.shields.io/badge/Data%20Engineering-3C3C3C?style=for-the-badge&logo=apacheairflow&logoColor=white"/>
-</p>
+</p> -->
 
 ---
 
