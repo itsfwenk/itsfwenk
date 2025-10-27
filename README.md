@@ -73,9 +73,7 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 
 ## 🧠 Now
 <!--START_SECTION:now-->
-🚀 Currently focusing on improving my understanding of **machine learning architectures** and **AI system design**.<br/>
-📚 Experimenting with **PyTorch**, building small research-style models, and studying **ML reproducibility**.<br/>
-🧩 Combining my 42 systems engineering background with **data-driven intelligence** to build efficient, explainable models.
+Currently working on **itsfwenk** — Fix GitHub Actions workflow: add permissions and escape commit messages (auto-updated daily).
 <!--END_SECTION:now-->
 
 <p align="center">
