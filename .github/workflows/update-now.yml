@@ -2,7 +2,7 @@ name: Update "Now" section
 
 on:
   schedule:
-    - cron: "0 8 * * *" # Runs every day at 08:00 UTC
+    - cron: "0 8 * * *" # Runs daily at 08:00 UTC
   workflow_dispatch:
   push:
     branches:
@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       - name: Get latest active repository
         id: latest
@@ -21,10 +23,17 @@ jobs:
           LATEST_REPO=$(curl -s "https://api.github.com/users/itsfwenk/repos?sort=updated&per_page=1" | jq -r '.[0].name')
           echo "LATEST_REPO=$LATEST_REPO" >> $GITHUB_ENV
 
-      - name: Generate new NOW content
+      - name: Clone latest repo to get latest commit
         run: |
-          FOCUS="Exploring new AI architectures and improving data workflows."
-          echo "NOW_CONTENT=Currently active on **$LATEST_REPO** — $FOCUS (auto-updated daily)." >> $GITHUB_ENV
+          git clone --depth 1 https://github.com/itsfwenk/$LATEST_REPO.git tmp_repo
+          cd tmp_repo
+          LATEST_COMMIT=$(git log -1 --pretty=%B)
+          echo "LATEST_COMMIT_MESSAGE=$LATEST_COMMIT" >> $GITHUB_ENV
+
+      - name: Generate NOW content
+        run: |
+          NOW_CONTENT="Currently working on **$LATEST_REPO** — $LATEST_COMMIT_MESSAGE (auto-updated daily)."
+          echo "NOW_CONTENT=$NOW_CONTENT" >> $GITHUB_ENV
 
       - name: Update README.md
         uses: actions/github-script@v6
@@ -35,11 +44,11 @@ jobs:
             const startTag = '<!--START_SECTION:now-->';
             const endTag = '<!--END_SECTION:now-->';
             const nowContent = process.env.NOW_CONTENT;
-      
+
             let content = fs.readFileSync(path, 'utf8');
             const startIndex = content.indexOf(startTag);
             const endIndex = content.indexOf(endTag);
-      
+
             if (startIndex !== -1 && endIndex !== -1) {
               const before = content.substring(0, startIndex + startTag.length);
               const after = content.substring(endIndex);
@@ -47,7 +56,14 @@ jobs:
             } else {
               content += `\n${startTag}\n${nowContent}\n${endTag}\n`;
             }
-      
+
             fs.writeFileSync(path, content);
             console.log('README.md updated successfully.');
 
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "🔄 Auto-update 'Now' section" || echo "No changes to commit"
+          git push
