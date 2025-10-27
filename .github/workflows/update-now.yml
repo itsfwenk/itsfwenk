@@ -31,10 +31,23 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const path = '.github/README.md';
+            const path = 'README.md';
             const startTag = '<!--START_SECTION:now-->';
             const endTag = '<!--END_SECTION:now-->';
             const nowContent = process.env.NOW_CONTENT;
-
+      
             let content = fs.readFileSync(path, 'utf8');
             const startIndex = content.indexOf(startTag);
+            const endIndex = content.indexOf(endTag);
+      
+            if (startIndex !== -1 && endIndex !== -1) {
+              const before = content.substring(0, startIndex + startTag.length);
+              const after = content.substring(endIndex);
+              content = before + '\n' + nowContent + '\n' + after;
+            } else {
+              content += `\n${startTag}\n${nowContent}\n${endTag}\n`;
+            }
+      
+            fs.writeFileSync(path, content);
+            console.log('README.md updated successfully.');
+
