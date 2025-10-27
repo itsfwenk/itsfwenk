@@ -73,7 +73,7 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 
 ## 🧠 Now
 <!--START_SECTION:now-->
-Currently working on **itsfwenk** — Fix GitHub Actions workflow: add permissions and escape commit messages (auto-updated daily).
+Currently working on **itsfwenk** — Now section commented (auto-updated daily).
 <!--END_SECTION:now-->
 
 <!-- <p align="center">
