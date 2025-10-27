@@ -72,12 +72,9 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 ---
 
 ## 🧠 Now
-
-<p align="center">
-🚀 Currently focusing on improving my understanding of <strong>machine learning architectures</strong> and <strong>AI system design</strong>.<br/>
-📚 Experimenting with <strong>PyTorch</strong>, building small research-style models, and studying <strong>ML reproducibility</strong>.<br/>
-🧩 Combining my 42 systems engineering background with <strong>data-driven intelligence</strong> to build efficient, explainable models.
-</p>
+🚀 Currently focusing on improving my understanding of **machine learning architectures** and **AI system design**.<br/>
+📚 Experimenting with **PyTorch**, building small research-style models, and studying **ML reproducibility**.<br/>
+🧩 Combining my 42 systems engineering background with **data-driven intelligence** to build efficient, explainable models.
 
 <p align="center">
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
