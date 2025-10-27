@@ -51,6 +51,7 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 | [**get_next_line**](https://github.com/itsfwenk/get_next_line) | File reading, line by line, using buffers. | C |
 | [**pipex**](https://github.com/itsfwenk/pipex_vog) | Unix pipes reimplementation with `execve` and `dup2`. | C |
 | [**push_swap**](https://github.com/itsfwenk/push_swap) | Sorting algorithms using stack operations. | C |
+| [**philosophers**](https://github.com/itsfwenk/philosophers) | Dining philosophers problem with threads and mutexes. | C |
 | [**minishell**](https://github.com/itsfwenk/minishell) | Unix shell recreation with parsing and pipes. | C |
 | [**cub3d**](https://github.com/itsfwenk/cub3d) | 3D raycasting engine inspired by Wolfenstein. | C |
 | [**Inception**](https://github.com/itsfwenk/inception42) | Multi-service Docker setup (Nginx, MariaDB, WordPress). | Docker |
