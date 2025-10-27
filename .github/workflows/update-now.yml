@@ -2,7 +2,7 @@ name: Update "Now" section
 
 on:
   schedule:
-    - cron: "0 8 * * *" # daily at 08:00 UTC
+    - cron: "0 8 * * *" # Runs every day at 08:00 UTC
   workflow_dispatch:
   push:
     branches:
@@ -27,17 +27,14 @@ jobs:
           echo "NOW_CONTENT=Currently active on **$LATEST_REPO** — $FOCUS (auto-updated daily)." >> $GITHUB_ENV
 
       - name: Update README.md
-        uses: peter-evans/replace-markdown@v1
+        uses: actions/github-script@v6
         with:
-          file: README.md
-          pattern: '(<!--START_SECTION:now-->)(.*?)(<!--END_SECTION:now-->)'
-          replacement: '${1}${{ env.NOW_CONTENT }}${3}'
-          flags: 's'
+          script: |
+            const fs = require('fs');
+            const path = '.github/README.md';
+            const startTag = '<!--START_SECTION:now-->';
+            const endTag = '<!--END_SECTION:now-->';
+            const nowContent = process.env.NOW_CONTENT;
 
-      - name: Commit changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "🔄 Auto-update 'Now' section" || echo "No changes to commit"
-          git push
+            let content = fs.readFileSync(path, 'utf8');
+            const startIndex = content.indexOf(startTag);
