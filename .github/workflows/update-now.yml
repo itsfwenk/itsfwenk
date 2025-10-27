@@ -3,7 +3,7 @@ name: Update "Now" section
 on:
   schedule:
     - cron: "0 8 * * *" # runs every day at 08:00 UTC
-  workflow_dispatch: # allows manual run
+  workflow_dispatch: # manual trigger
   push:
     branches:
       - main
@@ -19,33 +19,24 @@ jobs:
         id: latest
         run: |
           LATEST_REPO=$(curl -s "https://api.github.com/users/itsfwenk/repos?sort=updated&per_page=1" | jq -r '.[0].name')
-          echo "repo=$LATEST_REPO" >> $GITHUB_OUTPUT
+          echo "LATEST_REPO=$LATEST_REPO" >> $GITHUB_ENV
 
-      - name: Generate new NOW text
-        id: gen
+      - name: Generate new NOW content
         run: |
           FOCUS="Exploring new AI architectures and improving data workflows."
-          echo "content=Currently active on **${{ steps.latest.outputs.repo }}** — ${FOCUS} (auto-updated daily)." >> $GITHUB_OUTPUT
+          echo "NOW_CONTENT=Currently active on **$LATEST_REPO** — $FOCUS (auto-updated daily)." >> $GITHUB_ENV
 
-      - name: Update README
-        uses: crazy-max/ghaction-github-pages@v4
+      - name: Update README.md
+        uses: peter-evans/modify-markdown@v2
         with:
-          target_branch: main
-          build_dir: .
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Insert dynamic NOW section
-        uses: devops-infra/action-update-markdown-section@v1
-        with:
-          file: README.md
+          path: README.md
           section: now
-          value: "${{ steps.gen.outputs.content }}"
+          value: ${{ env.NOW_CONTENT }}
 
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "🔄 Auto-update 'Now' section"
+          git commit -m "🔄 Auto-update 'Now' section" || echo "No changes to commit"
           git push
