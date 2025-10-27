@@ -47,9 +47,9 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 | Project | Description | Tech |
 |----------|--------------|------|
 | [**libft**](https://github.com/itsfwenk/libft) | Rebuilding the C standard library from scratch. | C |
-| [**ft_printf**](https://github.com/itsfwenk/ft_printf) | Custom implementation of `printf`. | C |
+| [**ft_printf**](https://github.com/itsfwenk/printf) | Custom implementation of `printf`. | C |
 | [**get_next_line**](https://github.com/itsfwenk/get_next_line) | File reading, line by line, using buffers. | C |
-| [**pipex**](https://github.com/itsfwenk/pipex) | Unix pipes reimplementation with `execve` and `dup2`. | C |
+| [**pipex**](https://github.com/itsfwenk/pipex_vog) | Unix pipes reimplementation with `execve` and `dup2`. | C |
 | [**push_swap**](https://github.com/itsfwenk/push_swap) | Sorting algorithms using stack operations. | C |
 | [**minishell**](https://github.com/itsfwenk/minishell) | Unix shell recreation with parsing and pipes. | C |
 | [**cub3d**](https://github.com/itsfwenk/cub3d) | 3D raycasting engine inspired by Wolfenstein. | C |
