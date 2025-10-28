@@ -74,7 +74,7 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 
 ## 🧠 Now
 <!--START_SECTION:now-->
-Currently working on **itsfwenk** — add philo (auto-updated daily).
+Currently working on **philosophers** — readme (auto-updated daily).
 <!--END_SECTION:now-->
 
 <!-- <p align="center">
