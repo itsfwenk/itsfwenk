@@ -74,7 +74,7 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 
 ## 🧠 Now
 <!--START_SECTION:now-->
-Currently working on **itsfwenk** — 🔄 Auto-update 'Now' section (auto-updated daily).
+Currently working on **Total-perspective-vortex** — Initial commit (auto-updated daily).
 <!--END_SECTION:now-->
 
 <!-- <p align="center">
