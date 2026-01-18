@@ -12,7 +12,7 @@
 
 ---
 
-## 🧭 About Me
+## About Me
 
 <p align="center">
 I'm <strong>Franck Li</strong>, a <strong>42 Paris student</strong> passionate about exploring the full spectrum of computing — from <code>low-level systems</code> to <code>machine learning</code>.<br/>
@@ -23,7 +23,7 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 <p align="center">
   <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/>
@@ -37,12 +37,12 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 </p>
 
 <p align="center">
-🧠 <strong>AI & Data Science</strong> • 📊 <strong>Data Analysis</strong> • 🧩 <strong>Systems Design</strong> • 🐳 <strong>Containerization</strong>
+ <strong>AI & Data Science</strong> •  <strong>Data Analysis</strong> •  <strong>Systems Design</strong> •  <strong>Containerization</strong>
 </p>
 
 ---
 
-## 🧩 42 Paris Projects — Systems Foundations
+##  42 Paris Projects — Systems Foundations
 
 | Project | Description | Tech |
 |----------|--------------|------|
@@ -60,7 +60,7 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 
 ---
 
-## 🤖 Data Science & AI Projects — Modern Focus
+##  Data Science & AI Projects — Modern Focus
 
 | Project | Description | Tech |
 |----------|--------------|------|
@@ -72,7 +72,7 @@ Now, I’m building knowledge in <strong>data science</strong> and <strong>AI</s
 
 ---
 
-## 🧠 Now
+##  Now
 <!--START_SECTION:now-->
 Currently working on **itsfwenk** — 🔄 Auto-update 'Now' section (auto-updated daily).
 <!--END_SECTION:now-->
@@ -85,7 +85,7 @@ Currently working on **itsfwenk** — 🔄 Auto-update 'Now' section (auto-updat
 
 ---
 
-## 📊 GitHub Overview
+##  GitHub Overview
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=itsfwenk&show_icons=true&theme=transparent&hide_title=true" height="160" alt="GitHub stats"/>
@@ -94,7 +94,7 @@ Currently working on **itsfwenk** — 🔄 Auto-update 'Now' section (auto-updat
 
 ---
 
-## 🌐 Connect
+##  Connect
 
 <p align="center">
   <a href="https://github.com/itsfwenk"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
